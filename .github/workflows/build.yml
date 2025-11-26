@@ -11,21 +11,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run conversion
+      - name: Convert H5P to SCORM
         run: npm run build
 
-      - name: Upload SCORM artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload SCORM output
+        uses: actions/upload-artifact@v4
         with:
-          name: scorm-package
+          name: scorm-output
           path: output.zip
