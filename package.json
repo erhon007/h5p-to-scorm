@@ -1,10 +1,11 @@
 {
-  "name": "h5p-to-scorm",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "node cli.js export --input input.h5p --output output.zip --format scorm12"
-  },
-  "dependencies": {
-    "@lumieducation/h5p-cli": "^0.1.0"
-  }
+  "name": "h5p-to-scorm",
+  "version": "1.0.0",
+  "description": "Convert H5P to SCORM using Lumi Education library",
+  "scripts": {
+    "build": "npx @lumieducation/h5p-to-scorm input.h5p output.zip --scorm-version 1.2"
+  },
+  "dependencies": {
+    "@lumieducation/h5p-to-scorm": "^2.1.0"
+  }
 }
